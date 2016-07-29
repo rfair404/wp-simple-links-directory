@@ -8,5 +8,5 @@
 */
 load_plugin_textdomain( 'simple-link-directory', false, '/languages/' );
 
-require_once( 'riu-init.php' );
-new ResponsiveImageUpsizer\Init();
+require_once( 'simple-link-directory-init.php' );
+new SimpleLinkDirectory\Init();
