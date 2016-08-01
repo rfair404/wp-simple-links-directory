@@ -9,4 +9,5 @@
 load_plugin_textdomain( 'simple-link-directory', false, '/languages/' );
 
 require_once( 'simple-link-directory-init.php' );
-new SimpleLinkDirectory\Init();
+$sld = new SimpleLinkDirectory\SimpleLinkDirectory();
+$sld->init();

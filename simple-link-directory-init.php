@@ -7,13 +7,14 @@ use SimpleLinkDirectory\Common as Common;
  * The Init class for the plugin, kicks everything off, WordPress sytle
  * @since 0.1
  */ 
-class Init{
+class SimpleLinkDirectory{
     public $common = false;
     public $admin = false;
     public $display = false;
     
     function init(){
         add_action( 'plugins_loaded', array( $this, 'load' ) , 10 );
+        add_action( 'plugins_loaded', array( $this, 'set_common' ) , 10 );
     }
     /**
      * load pulls in the required files for the plugin
@@ -28,6 +29,8 @@ class Init{
     }
     
     function set_common(){
-        $this->common = new Common();
+        $common = new Common;
+        $this->common = $common;
+        $common->init();
     }
 }
